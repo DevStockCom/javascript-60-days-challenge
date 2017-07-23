@@ -1,0 +1,28 @@
+# DAY 1
+
+This is your first task, it will be very easy just for quick warm up, before DAY 2 :) so be ready fuckarounders :)
+There won't be more time to fuck around if you know what i mean :)
+
+
+TASK:
+1) prepare project according to movie:
+http://outgoingpoland.pl/javascript-60-days-challange/day-1/01%20-%20JavaScript%20Drum%20Kit.mp4
+2) Try to impress me, add extra feature, something different. For example when I press some key
+instead of playing sound you can start playing some movie. If you want add movie to project files, make it very short (3-5s)
+
+IMPORTANT:
+1) you can only change and add files inside your own folder.
+2) create new folder with your name on the same level as folder 'bartek'
+3) copy files from starter/files to your folder, sounds folder should stay,
+don't copy sounds just refer to it inside your HTML file
+4) make initial commit after setting all files
+TEMPLATE FOR YOUR COMMIT NAMES
+FIRST COMMIT - "{yourName} {day} - initial commit" - ex. "bartek day1 - inital commit"
+NEXT COMMITS - "{yourName} {day} - {commitNumber} - ex. "bartek day1 - 1"
+5) we're working on branch master, don't create new branches, in the future when you will aproach to next level we will
+create more complex projects and we will split our work to few branches, everyone will have differen't feature to implement.
+3) don't use any 3rd party libraries, to complete this task you need only vanilla JS
+
+GOOD LUCK FUCKAROUNDERS :)
+DEADLINE for this task is 23.07.2017 23:59
+
