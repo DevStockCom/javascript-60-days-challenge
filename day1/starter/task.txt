@@ -24,5 +24,5 @@ create more complex projects and we will split our work to few branches, everyon
 3) don't use any 3rd party libraries, to complete this task you need only vanilla JS
 
 GOOD LUCK FUCKAROUNDERS :)
-DEADLINE for this task is 23.07.2017 23:59
+DEADLINE for this task is 24.07.2017 23:59
 
