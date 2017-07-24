@@ -6,6 +6,10 @@
 		audio.play()
 		key.classList.add('playing');
 
+		let count = document.querySelector(".counter").innerHTML;
+		let countSound = parseInt(count) +1;
+		document.querySelector(".counter").innerHTML = countSound;
+
 		setTimeout(function(){
 			key.classList.remove('playing');
 		}
@@ -21,3 +25,5 @@
 	const keys = document.querySelectorAll(".key");
 	// keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 	window.addEventListener("keydown", playSound);
+
+	
