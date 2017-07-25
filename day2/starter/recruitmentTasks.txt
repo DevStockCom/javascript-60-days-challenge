@@ -8,3 +8,7 @@ For example, given S = "welcome" your function should return "emoclew"
 
 Create new file solution.js in your folder and put there implementation of this task.
 
+There are many ways to solve this task, please solve it at least in 2 different ways, more is of course very appreciated :)
+
+GOOD LUCK :)
+
