@@ -1,0 +1,18 @@
+#KNOWLEDGE - what you need to know after completing this task
+
+CSS
+    - what is background-size propery and what values can be assign to it
+    - what is purpose of: display: flex; flex:1;
+    - what is rem? ex. padding:2rem;
+    - what properties can obtain box-shadow and what is inset?
+    - explain positioning in depth(relative, fixed, static, absolute)
+    - what is transform-origin?
+    - what is cubic-bezier and transition-timing-function
+JS
+    - difference between setInterval and setTimeout,
+      how we can use it, why it can be useful,
+      which method is more dangerous and can affect performance, explain
+    - what is object Date,
+      how we can use it,
+      find in documentation and write down how we can set different format of dates in our app using Date object,
+      ex. 23:59 Monday 28 December 2016
