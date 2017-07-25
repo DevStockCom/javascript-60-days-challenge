@@ -1,42 +1,85 @@
 html {
-    background:#018DED url(http://unsplash.it/1500/1000?image=881&blur=50);
-    background-size:cover;
-    font-family:'helvetica neue';
-    text-align: center;
-    font-size: 10px;
+  background:#018DED url(http://unsplash.it/1500/1000?image=881&blur=50);
+  background-size: cover;
+  font-family: 'helvetica neue';
+  text-align: center;
+  font-size: 10px;
 }
+
 body {
-    margin: 0;
-    font-size: 2rem;
-    display:flex;
-    flex:1;
-    min-height: 100vh;
-    align-items: center;
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
+
 .clock {
-    width: 30rem;
-    height: 30rem;
-    border:20px solid white;
-    border-radius:50%;
-    margin:50px auto;
-    position: relative;
-    padding:2rem;
-    box-shadow:
-    0 0 0 4px rgba(0,0,0,0.1),
-    inset 0 0 0 3px #EFEFEF,
-    inset 0 0 10px black,
-    0 0 10px rgba(0,0,0,0.2);
+  width: 30rem;
+  height: 30rem;
+  border: 20px solid white;
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow:
+  0 0 0 4px rgba(0,0,0,0.1),
+  inset 0 0 0 3px #EFEFEF,
+  inset 0 0 10px black,
+  0 0 10px rgba(0,0,0,0.2);
 }
+
 .clock-face {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform: translateY(-3px); /* account for the height of the clock hands */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* account for the height of the clock hands */
+  transform: translateY(-3px);
 }
+
+.circle {
+  width: 12px;
+  height: 12px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-6px, -3px);
+  border-radius: 50%;
+}
+
 .hand {
-    width:50%;
-    height:6px;
-    background:black;
-    position: absolute;
-    top:50%;
+  background: black;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.min-hand {
+  width: 50%;
+  height: 6px;
+  transform-origin: 100%;
+}
+
+.hour-hand {
+  width: 50%;
+  height: 6px;
+  transform-origin: 100%;
+}
+
+/* need to fix the problem with no Y-centered to the .circle hand while e.g. 45s*/
+.second-hand {
+  width: 62.5%;
+  height: 2px;
+  transform-origin: 80%;
+  -webkit-transition: all 0.05s;
+  -o-transition: all 0.05s;
+  transition: all 0.05s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  -o-transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
