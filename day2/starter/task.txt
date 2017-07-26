@@ -1,0 +1,32 @@
+# DAY 1
+
+It's time for second task guys :)
+
+
+TASK:
+1) prepare project according to movie:
+http://outgoingpoland.pl/javascript-60-days-challange/day-1/02%20-%20CSS%20+%20JS%20Clock.mp4
+2) Try to impress me, add extra feature, something different.
+- fix the problem which is mentioned in the end of movie
+- try to upgrade clock and hands to be more fancy (add hours, modify hands), try to play with CSS(and images)
+- extra feature can be different timezones, for example when I click New york button, clock will show me time in New York,
+when i click Warsaw it will show again our timezone time.
+- or add anything else :)
+
+IMPORTANT:
+1) you can only change and add files inside your own folder.
+2) create new folder with your name on the same level as folder 'bartek'
+3) copy files from starter/files to your folder, sounds folder should stay,
+don't copy sounds just refer to it inside your HTML file
+4) make initial commit after setting all files
+TEMPLATE FOR YOUR COMMIT NAMES
+FIRST COMMIT - "{yourName} {day} - initial commit" - ex. "bartek day1 - inital commit"
+NEXT COMMITS - "{yourName} {day} - {commitNumber} - ex. "bartek day1 - 1"
+5) we're working on branch master, don't create new branches, in the future when you will aproach to next level we will
+create more complex projects and we will split our work to few branches, everyone will have differen't feature to implement.
+3) don't use any 3rd party libraries, to complete this task you need only vanilla JS
+
+GOOD LUCK FUCKAROUNDERS :)
+DEADLINE for this task is 26.07.2017 23:59
+DEADLINE for KNOWLEDGE answers will be 27.07.2017 23:59
+
