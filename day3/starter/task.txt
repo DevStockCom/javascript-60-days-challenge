@@ -3,42 +3,50 @@
 It's time for third task guys :) It won't be so easy :D so be prepared
 
 
-TASK:
-1) prepare project according to movie:
-http://outgoingpoland.pl/javascript-60-days-challange/day-1/02%20-%20CSS%20+%20JS%20Clock.mp4
-2) Try to impress me, add extra feature, something different.
-- fix the problem which is mentioned in the end of movie
-- try to upgrade clock and hands to be more fancy (add hours, modify hands), try to play with CSS(and images)
-- extra feature can be different timezones, for example when I click New york button, clock will show me time in New York,
-when i click Warsaw it will show again our timezone time.
-- or add anything else :)
+LINKS TO STUDY:
+http://outgoingpoland.pl/javascript-60-days-challange/day-2/04%20-%20Array%20Cardio%20Day%201.mp4
+HIGHER ORDER FUNCTIONS https://www.youtube.com/watch?v=BMUiFMZr7vk&index=1&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84
+MAP https://www.youtube.com/watch?v=bCqtb-Z5YGQ&index=2&t=28s&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84
+REDUCE BASICS https://www.youtube.com/watch?v=Wl98eZpkp-c&index=3&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84&t=253s
+REDUCE ADVANCED https://www.youtube.com/watch?v=1DMolJ2FrNY&index=4&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84
+DOCUMENTATION https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Array
+
+TASK
+tasks are described inside js files
 
 IMPORTANT:
 From now we will change the way of commiting changes.
 Everyone have to create new branch from master branch and when his task will be ready pull request should be send.
 
 INSTRUCTION HOW to create and switch to new branch
-1) git checkout -b <newBranchName>
+1) git branch <newBranchName> - will create new branch
    new branch name should follow such pattern:
    day<dayNumber>-<yourName> so for me command wil be:
-   git checkout -b day1-bartek
+   git branch day1-bartek
 2) git checkout day1-bartek - this will change actual branch to new one,
    to check if you are on correct branch just hit:
    git branch
-3) to push changes
-1) you can only change and add files inside your own folder.
-2) create new folder with your name on the same level as folder 'bartek'
-3) copy files from starter/files to your folder, sounds folder should stay,
-don't copy sounds just refer to it inside your HTML file
-4) make initial commit after setting all files
+3) to push changes you have to connect just created local branch with remote one which doesn't exist yet, to do that use:
+   git push --set-upstream origin day2-bartek
+   after that you will be able to git commit and git push changes like in previous days
+4) when your tasks will be ready you have to send pull request, it can be made using our project github page
+5) I will verify your changes and add comments to your code. I will do code review, it is very common in every job that senior
+   developers do code review of juniors code, so then juniors will receive some feedback(comments in github), then correct changes and
+   pull request will be accepted and merge with master branch.
+   In real world it is important that for every new feature we are creating new branch, only when new feature is complete in 100% and tested can be
+   merged with main(master) branch. If everyone will work on the same branch, like we are acting right, there can be big mess. Imagine that few programmers
+   changes the same files, after that there will be many conflicts, merges and such workflow is hard to maintain. It isn't practical. So in sake of good habits
+   we will start working as team. In the near future if you will be still solving my tasks, we will create project where each of you will be responsible for
+   different module of the application and then you will see how important is to use repository properly and how git is mightful.
+
+
+6) create new folder with your name on the same level as folder 'bartek'
+7) copy files from starter/files to your folder
+8) make initial commit after setting all files
 TEMPLATE FOR YOUR COMMIT NAMES
 FIRST COMMIT - "{yourName} {day} - initial commit" - ex. "bartek day1 - inital commit"
 NEXT COMMITS - "{yourName} {day} - {commitNumber} - ex. "bartek day1 - 1"
-5) we're working on branch master, don't create new branches, in the future when you will aproach to next level we will
-create more complex projects and we will split our work to few branches, everyone will have differen't feature to implement.
-3) don't use any 3rd party libraries, to complete this task you need only vanilla JS
 
 GOOD LUCK FUCKAROUNDERS :)
-DEADLINE for this task is 26.07.2017 23:59
-DEADLINE for KNOWLEDGE answers will be 27.07.2017 23:59
+DEADLINE for this task, recruitment task and knowledge is 30.07.2017 23:59
 
