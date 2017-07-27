@@ -1,0 +1,52 @@
+# DAY 1
+
+It's time for third task guys :) It won't be so easy :D so be prepared
+
+
+LINKS TO STUDY:
+http://outgoingpoland.pl/javascript-60-days-challange/day-2/04%20-%20Array%20Cardio%20Day%201.mp4
+HIGHER ORDER FUNCTIONS https://www.youtube.com/watch?v=BMUiFMZr7vk&index=1&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84
+MAP https://www.youtube.com/watch?v=bCqtb-Z5YGQ&index=2&t=28s&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84
+REDUCE BASICS https://www.youtube.com/watch?v=Wl98eZpkp-c&index=3&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84&t=253s
+REDUCE ADVANCED https://www.youtube.com/watch?v=1DMolJ2FrNY&index=4&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84
+DOCUMENTATION https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Array
+
+TASK
+tasks are described inside js files
+
+IMPORTANT:
+From now we will change the way of commiting changes.
+Everyone have to create new branch from master branch and when his task will be ready pull request should be send.
+
+INSTRUCTION HOW to create and switch to new branch
+1) git branch <newBranchName> - will create new branch
+   new branch name should follow such pattern:
+   day<dayNumber>-<yourName> so for me command wil be:
+   git branch day1-bartek
+2) git checkout day1-bartek - this will change actual branch to new one,
+   to check if you are on correct branch just hit:
+   git branch
+3) to push changes you have to connect just created local branch with remote one which doesn't exist yet, to do that use:
+   git push --set-upstream origin day2-bartek
+   after that you will be able to git commit and git push changes like in previous days
+4) when your tasks will be ready you have to send pull request, it can be made using our project github page
+5) I will verify your changes and add comments to your code. I will do code review, it is very common in every job that senior
+   developers do code review of juniors code, so then juniors will receive some feedback(comments in github), then correct changes and
+   pull request will be accepted and merge with master branch.
+   In real world it is important that for every new feature we are creating new branch, only when new feature is complete in 100% and tested can be
+   merged with main(master) branch. If everyone will work on the same branch, like we are acting right, there can be big mess. Imagine that few programmers
+   changes the same files, after that there will be many conflicts, merges and such workflow is hard to maintain. It isn't practical. So in sake of good habits
+   we will start working as team. In the near future if you will be still solving my tasks, we will create project where each of you will be responsible for
+   different module of the application and then you will see how important is to use repository properly and how git is mightful.
+
+
+6) create new folder with your name on the same level as folder 'bartek'
+7) copy files from starter/files to your folder
+8) make initial commit after setting all files
+TEMPLATE FOR YOUR COMMIT NAMES
+FIRST COMMIT - "{yourName} {day} - initial commit" - ex. "bartek day1 - inital commit"
+NEXT COMMITS - "{yourName} {day} - {commitNumber} - ex. "bartek day1 - 1"
+
+GOOD LUCK FUCKAROUNDERS :)
+DEADLINE for this task, recruitment task and knowledge is 30.07.2017 23:59
+
