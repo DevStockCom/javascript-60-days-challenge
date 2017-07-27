@@ -39,12 +39,18 @@ warsaw.addEventListener("click", function() {
   clearInterval(interval);
   setDateWarsaw();
   interval = setInterval(setDateWarsaw, 1000);
+<<<<<<< HEAD
   document.body.style.backgroundImage = "url('http://i1.trekearth.com/photos/76332/zzdsc00053.jpg')";
+=======
+>>>>>>> f4670856e9a644e93964b2aa9d1d345651507563
 });
 
 bangkok.addEventListener("click", function() {
   clearInterval(interval);
   setDateBangkok();
   interval = setInterval(setDateBangkok, 1000);
+<<<<<<< HEAD
   document.body.style.backgroundImage = "url('http://img07.deviantart.net/aba0/i/2012/312/6/c/bangkok_night_by_rawangtak-d5j71rx.jpg')";
+=======
+>>>>>>> f4670856e9a644e93964b2aa9d1d345651507563
 });
