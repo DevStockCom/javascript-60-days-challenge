@@ -26,6 +26,7 @@ body {
     inset 0 0 0 3px #EFEFEF,
     inset 0 0 10px black,
     0 0 10px rgba(0,0,0,0.2);
+    display:block;
 }
 .clock-face {
     position: relative;
@@ -42,4 +43,12 @@ body {
     transform-origin:100%;
     transform:rotate(90deg);
     transition-timing-function: cubic-bezier(0.13, 1.75, 0.58, 1);
+}
+
+.timeZone{
+    padding:100px;
+}
+
+button{
+    background-color:teal;
 }
