@@ -2,25 +2,13 @@ const secondHand = document.querySelector('.second-hand');
 const minHand = document.querySelector('.min-hand');
 const hourHand = document.querySelector('.hour-hand');
 
-warsaw = document.querySelector('#warsaw');
-bangkok = document.querySelector('#bangkok');
-
-warsaw.onclick = function() {
-  const now = new Date();
-  console.log(now);
+Date.prototype.addHours = function(h) {
+  this.setHours(this.getHours() + h);
+  return this;
 }
 
-bangkok.onclick = function() {
-  Date.prototype.addHours = function(h) {
-    this.setHours(this.getHours() + h);
-    return this;
-  }
-  const now = new Date().addHours(4);
-  console.log(now);
-}
-
-function setDate() {
-  const now = new Date();
+const setDate = function(h) {
+  const now = new Date().addHours(h);
   const seconds = now.getSeconds();
   const secondsDegrees = ((seconds / 60) * 360) + 90;
   if ( secondsDegrees == 90 ) {
@@ -40,7 +28,23 @@ function setDate() {
 
   const day = now.getDate();
   document.querySelector('.day').innerHTML = day;
-
 }
 
-setInterval(setDate, 1000);
+const setDateWarsaw = setDate.bind(undefined, 0);
+const setDateBangkok = setDate.bind(undefined, 4);
+
+let interval = setInterval(setDateWarsaw, 1000);
+
+warsaw.addEventListener("click", function() {
+  clearInterval(interval);
+  setDateWarsaw();
+  interval = setInterval(setDateWarsaw, 1000);
+  document.body.style.backgroundImage = "url('http://i1.trekearth.com/photos/76332/zzdsc00053.jpg')";
+});
+
+bangkok.addEventListener("click", function() {
+  clearInterval(interval);
+  setDateBangkok();
+  interval = setInterval(setDateBangkok, 1000);
+  document.body.style.backgroundImage = "url('http://img07.deviantart.net/aba0/i/2012/312/6/c/bangkok_night_by_rawangtak-d5j71rx.jpg')";
+});
