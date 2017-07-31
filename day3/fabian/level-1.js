@@ -17,14 +17,14 @@ const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick
 // Array.prototype.filter()
 // 1. Filter the list of inventors for those who were born between 1500 and 1700
 
-// const fifteen = inventors.filter(inventor => {
+// const bornInventors = inventors.filter(inventor => {
 //   if (inventor.year >= 1500 && inventor.year < 1700) {
 //     return true; // means keep it!
 //   }
 // });
 
-const fifteen = inventors.filter(inventor => (inventor.year >= 1500 && inventor.year < 1700));
-console.table(fifteen);
+const inventorsBornDate = inventors.filter(inventor => (inventor.year >= 1500 && inventor.year < 1700));
+console.table(inventorsBornDate);
 
 
 // Array.prototype.map()
@@ -34,8 +34,29 @@ console.table(fifteen);
 const fullNames = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
 console.log(fullNames);
 
-const age = inventors.map(inventor => `${inventor.passed - inventor.year}`);
-console.log(age);
+// const age = inventors.map(inventor => parseInt(`${inventor.passed - inventor.year}`));
+// console.log(age);
+
+// new array with calculated age property assigned to every inventor
+// const inventorsNew = [];
+// for (var i = 0; i < inventors.length; i++) {
+//   inventorsNew.push({
+//     first: inventors[i].first,
+//     last: inventors[i].first,
+//     age: parseInt(`${inventors[i].passed - inventors[i].year}`)
+//   })
+// }
+// console.table(inventorsNew);
+
+const inventorsNew = [];
+for (var i = 0; i < inventors.length; i++) {
+  inventorsNew.push({
+    first: inventors[i].first,
+    last: inventors[i].first,
+    age: parseInt(`${inventors[i].passed - inventors[i].year}`)
+  })
+}
+console.table(inventorsNew);
 
 
 // Array.prototype.sort()
@@ -50,37 +71,35 @@ console.log(age);
 //   }
 // });
 
-const ordered = inventors.sort((a, b) => a.year > b.year ? 1 : -1);
+const ordered = inventorsNew.sort((a, b) => a.age > b.age ? 1 : -1);
 console.table(ordered);
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live?
 
 // var totalYears = 0;
-//
 // for (var i = 0; i < inventors.length; i++) {
 //   totalYears += inventors[i].year
 // }
-const totalYears = inventors.reduce((total, inventor) => {
-  return total + (inventor.passed - inventor.year);
-}, 0);
 
+// const totalYears = inventors.reduce((total, inventor) => total + (inventor.passed - inventor.year), 0);
+const totalYears = inventorsNew.reduce((total, inventor) => total + inventor.age, 0);
 console.log(totalYears);
 
 
-// 5*. Sort the inventors by years lived
+// 5*. Sort the inventors by years lived  - task from the video, same as 3, bit different solution
 
-const oldest = inventors.sort(function(a, b) {
-  const lastGuy = a.passed - a.year;
-  const nextGuy = b.passed - b.year;
-  // if (lastGuy > nextGuy) {
-  //   return -1;
-  // } else {
-  //   return 1;
-  // }
-  return lastGuy > nextGuy ? -1 : 1;
-});
-console.table(oldest);
+// const oldest = inventorsNew.sort(function(a, b) {
+//   const lastGuy = a.passed - a.year;
+//   const nextGuy = b.passed - b.year;
+//   // if (lastGuy > nextGuy) {
+//   //   return -1;
+//   // } else {
+//   //   return 1;
+//   // }
+//   return lastGuy > nextGuy ? -1 : 1;
+// });
+// console.table(oldest);
 
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
@@ -91,10 +110,15 @@ console.table(oldest);
 // // const links = Array.from(category.querySelectorAll('a'));
 // const links = [...category.querySelectorAll('a')];
 //
+//
 // const de = links
 //             .map(link => link.textContent)
-//             .filter(streetName => streetName.includes('de'));
+            // .filter(streetName => streetName.includes('de'));
 
+const boulevards = ["Boulevards of Paris", "City walls of Paris", "Thiers wall", "Wall of Charles V", "Wall of Philip II Augustus", "City gates of Paris", "Haussmann's renovation of Paris", "Boulevards of the Marshals", "Boulevard Auguste-Blanqui", "Boulevard Barbès", "Boulevard Beaumarchais", "Boulevard de l'Amiral-Bruix", "Boulevard des Capucines", "Boulevard de la Chapelle", "Boulevard de Clichy", "Boulevard du Crime", "Boulevard Haussmann", "Boulevard de l'Hôpital", "Boulevard des Italiens", "Boulevard de la Madeleine", "Boulevard de Magenta", "Boulevard Montmartre", "Boulevard du Montparnasse", "Boulevard Raspail", "Boulevard Richard-Lenoir", "Boulevard de Rochechouart", "Boulevard Saint-Germain", "Boulevard Saint-Michel", "Boulevard de Sébastopol", "Boulevard de Strasbourg", "Boulevard du Temple", "Boulevard Voltaire", "Boulevard de la Zone"];
+
+const de = boulevards.filter(name => name.includes('de'));
+console.log(de);
 
 
 // 7. sort Exercise
