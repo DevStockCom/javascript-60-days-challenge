@@ -2,17 +2,17 @@ const names = ["Ben", "Jafar", "Matt", "Priya", "Brian"];
 //TIP: use console.log or console.table to print data
 
 //9. Print all the names in an array, using for loop
-for (var i = 0; i < 10; i++) {
-    document.write(i);
+
+for(var i = 0; i < names.length ;i++) {
+    console.log(names[i]);
 }
 
-
-
+console.log("---------------");
 //10. Print all the names in an array, using forEach loop
 
-function task10() {
-    //put code here
-}
+names.forEach(function(el) {
+    console.log(el);
+});
 
 //11. Project an array of videos into an array of {id,title} pairs using forEach()
 //For each video, add a projected {id, title} pair to the videoAndTitlePairs array.
@@ -54,16 +54,25 @@ function task11() {
         ],
         videoAndTitlePairs = [];
 
-    //put code here
+    newReleases.forEach(function(a) {
+        videoAndTitlePairs.push({id: a.id, title: a.title});
+    });
 
     return videoAndTitlePairs;
 }
+
 
 //12. Implement map()
 //To make projections easier, let's add a map() function to the Array type.
 //Map accepts the projection function to be applied to each item in the source array, and returns the projected array.
 //TIP to do this use forEach or for loop
-Array.prototype.customMap = function() {};
+Array.prototype.customMap = function(maps) {
+    var results = [];
+    this.forEach(function(el) {
+        results.push(maps(el));
+    });
+    return results;
+};
 
 //Your customMap function should give the same result as original Array.prototype.map function, and behave in the same way
 
