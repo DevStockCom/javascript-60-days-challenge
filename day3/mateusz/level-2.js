@@ -60,30 +60,26 @@ function task11() {
 
     return videoAndTitlePairs;
     
-    console.table(videoAndTitlePairs);
+    console.log(videoAndTitlePairs);
 }
 
-task11();
+var task = task11();
+
+console.log(task);
 
 
 //12. Implement map()
 //To make projections easier, let's add a map() function to the Array type.
 //Map accepts the projection function to be applied to each item in the source array, and returns the projected array.
 //TIP to do this use forEach or for loop
-Array.prototype.customMap = function(maps) {
-    var results = [];
-    this.forEach(function(el) {
-        results.push(maps(el));
+Array.prototype.customMap = function(map) {
+    var projectionFunction = [];
+    this.forEach(function(element) {
+        projectionFunction.push(map(element));
     });
-    return results;
-};
-
-var number = [1, 2, 3, 4, 5]
-
-number.customMap();
-
-
-
+    
+    return projectionFunction;
+}
 //Your customMap function should give the same result as original Array.prototype.map function, and behave in the same way
 
 //13. Use newly create customMap() to project an array of videos into an array of {id,title} pairs
@@ -125,7 +121,9 @@ function task13() {
     ];
 
     // ------------ INSERT CODE HERE! -----------------------------------
-    return newReleases.customMap // finish this expression!
+    return newReleases.customMap = function(movie) {
+        return {id: video.id, title: video.title};});
+    // finish this expression!
     // ------------ INSERT CODE HERE! -----------------------------------
 
 }
@@ -172,12 +170,19 @@ function task14() {
         videos = [];
 
     // ------------ INSERT CODE HERE! -----------------------------------
-    // Use forEach function to accumulate every video with a rating of 5.0
+     newReleases.forEach(function(movie) {
+        if (movie.rating == 5.0 ) {
+            videos.push(movie);}
+    });
     // ------------ INSERT CODE HERE! -----------------------------------
 
-    return videos;
+    return videos;   
+    console.log(videos);
 }
 
+var wideo = task14();
+
+console.log(wideo);
 //15. Implement customFilter() to Array.prototype
 //To make filtering easier, let's add a customFilter() function to the Array type. The
 // customFilter() function accepts a predicate. A predicate is a function that accepts an item in the array,
@@ -186,16 +191,15 @@ function task14() {
 Array.prototype.filter = function(predicateFunction) {
     var results = [];
     this.forEach(function(itemInArray) {
-        // ------------ INSERT CODE HERE! ----------------------------
-        // Apply the predicateFunction to each item in the array.
-        // If the result is truthy, add the item to the results array.
-        // Note: remember you can add items to the array using the array's
-        // push() method.
-        // ------------ INSERT CODE HERE! ----------------------------
+        if(predicateFunction(itemInArray)) {
+            results.push(itemInArray);
+        }
     });
 
     return results;
+    console.log(results);
 };
+
 
 //16. Chain customFilter and customMap to collect the ids of videos that have a rating of 5.0
 
@@ -239,6 +243,13 @@ function task16() {
     // Chain the filter and map functions to select the id of all videos
     // with a rating of 5.0.
 
-    return newReleases // Complete this expression
+    newReleases.filter(function(movie) {
+        if(movie.rating == 5.0) {
+            return.movie
+        }
+    })
+    
+    newReleases.map(function(movie) {
+        return movie.id });
     // ------------ INSERT CODE HERE! -----------------------------------
 }
