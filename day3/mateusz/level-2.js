@@ -54,12 +54,16 @@ function task11() {
         ],
         videoAndTitlePairs = [];
 
-    newReleases.forEach(function(a) {
-        videoAndTitlePairs.push({id: a.id, title: a.title});
+    newReleases.forEach(function(video) {
+        videoAndTitlePairs.push(`${video.id}, ${video.title}`);
     });
 
     return videoAndTitlePairs;
+    
+    console.table(videoAndTitlePairs);
 }
+
+task11();
 
 
 //12. Implement map()
@@ -73,6 +77,12 @@ Array.prototype.customMap = function(maps) {
     });
     return results;
 };
+
+var number = [1, 2, 3, 4, 5]
+
+number.customMap();
+
+
 
 //Your customMap function should give the same result as original Array.prototype.map function, and behave in the same way
 
