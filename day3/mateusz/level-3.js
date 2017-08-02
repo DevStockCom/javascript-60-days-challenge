@@ -131,7 +131,11 @@ function task19() {
         }
     ];
 
-
+    movieLists.map(function(video) {
+       return video.videos.map(function(vid) {
+            return vid.id;
+        });
+    }).concatAll();
 }
 
 
