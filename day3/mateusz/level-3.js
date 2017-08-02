@@ -69,7 +69,17 @@ console.log(run);
 //Let's add a concatAll() function to the Array type. The concatAll() function iterates over each sub-array in the array and collects the results in a new, flat array. Notice that the concatAll() function expects each item in the array to be another array.
 //TIP: this function should work like your solution in task 16
 
-// put code here
+Array.prototype.concatAll = function() {
+    var subArr = [];
+    subArr.forEach(function(elements) {
+        var customArray = [1, 2, 3];
+        elements.forEach(function(el) {
+            subArr.push(el)
+        });
+    });
+    return subArr;
+    console.log(subArr);
+}
 
 
 //19: Use map() and concatAll() to project and flatten the movieLists into an array of video ids
@@ -121,7 +131,6 @@ function task19() {
         }
     ];
 
-    return movieLists. //put code here
 
 }
 
