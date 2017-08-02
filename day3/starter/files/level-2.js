@@ -221,3 +221,12 @@ function task16() {
     return newReleases // Complete this expression
     // ------------ INSERT CODE HERE! -----------------------------------
 }
+
+
+Array.prototype.map = function(projectionFn) {
+    let result = [];
+    this.forEach((el) => {
+        result.push(projectionFn(el));
+    });
+    return result;
+}
